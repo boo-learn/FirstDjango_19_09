@@ -1,4 +1,4 @@
-"""FirstDajngo URL Configuration
+"""FirstDjango URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.1/topics/http/urls/
@@ -19,5 +19,7 @@ from MainApp import views
 
 urlpatterns = [
     path('', views.main_page),
-    path('about', views.about),
+    path('about', views.about_page),
+    path('item/<int:item_id>/', views.item_page),
+    path('items', views.items_page),
 ]
