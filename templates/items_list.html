@@ -5,10 +5,11 @@
     <title>Списко товаров</title>
 </head>
 <body>
-    <ol>
-        {% for item in items %}
-            <li><a href="/item/{{item.id}}">{{ item.name }}</a></li>
-        {% endfor %}
-    </ol>
+<a href="/">Home</a>
+<ol>
+    {% for item in items %}
+    <li><a href="/item/{{item.id}}">{{ item.name }}</a></li>
+    {% endfor %}
+</ol>
 </body>
 </html>

@@ -33,8 +33,10 @@ def about(request):
 def item(request, item_id: int):
     for item in items:
         if item["id"] == item_id:
-            item_result = f"Товар: {item['name']}, количество: {item['quantity']}"
-            return HttpResponse(item_result)
+            context = {
+                "item": item
+            }
+            return render(request, 'item.html', context)
     # return HttpResponseNotFound(f"Item with id={item_id} not found")
     raise Http404(f"Item with id={item_id} not found")
 
