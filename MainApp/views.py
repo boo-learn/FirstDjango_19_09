@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseNotFound, Http404
+from MainApp.models import Item
 
 author = {
     "name": "Евгений",
@@ -42,6 +43,7 @@ def item(request, item_id: int):
 
 
 def items_list(request):
+    items = Item.objects.all()
     context = {
         "items": items
     }
