@@ -1,13 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Списко товаров</title>
+    <title>Список товаров</title>
 </head>
 <body>
+<a href="/">Главная</a> > <a href="/items"><b>Список товаров</b></a> > <a href="/about"> Об авторе</a>
     <ol>
         {% for item in items %}
-            <li><a href="/item/{{item.id}}">{{ item.name }}</a></li>
+        <li>
+            <a href="/item/{{item.id}}">{{item.name}}</a>
+        </li>
         {% endfor %}
     </ol>
 </body>
