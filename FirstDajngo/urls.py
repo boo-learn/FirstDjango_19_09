@@ -19,6 +19,6 @@ from MainApp import views
 
 urlpatterns = [
     path('', views.main_page),
-    path('items/list', views.items_list, name="items-list"), # items --> items/list
-    path('item/<int:item_id>', views.item),
+    path('items/list/', views.items_list, name="items-list"), # items --> items/list
+    path('item/<int:item_id>/', views.item, name="item-page"),
 ]
